@@ -18,15 +18,7 @@ struct RandomQuoteView: View {
         NavigationView{
             VStack{
                 Spacer()
-                VStack(spacing: 10) {
-                    Text(quote)
-                    HStack{
-                        Spacer(minLength: 0)
-                        Text(author)
-                        .fontWeight(.thin)
-                        .font(.system(size: 15))
-                    }
-                }
+                ContentBlockView(quote: quote, author: author)
                 Spacer()
                 HStack(spacing: 70){
                     Button(action: {

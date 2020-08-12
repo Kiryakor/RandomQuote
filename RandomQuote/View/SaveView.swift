@@ -16,17 +16,8 @@ struct SaveView: View {
         NavigationView{
             List{
                 ForEach(data.save, id: \.self) { (element) in
-                    VStack(spacing: 20) {
-                        Text(element.quote)
-                            .multilineTextAlignment(.leading)
-                        HStack{
-                            Spacer(minLength: 0)
-                            Text(element.author)
-                                .fontWeight(.thin)
-                                .font(.system(size: 15))
-                                
-                        }
-                    }.padding(.vertical,20)
+                    ContentBlockView(quote: element.quote, author: element.author)
+                        .padding(.vertical,20)
                 }
                 .onDelete(perform: onDelete)
             }

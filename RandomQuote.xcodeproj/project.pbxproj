@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED47E74C24E453EA00AE5E8B /* ContentBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED47E74B24E453EA00AE5E8B /* ContentBlockView.swift */; };
 		ED93AF4D24E3EEE600959206 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = ED93AF4C24E3EEE500959206 /* Data.json */; };
 		ED93AF4F24E3FC2300959206 /* SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93AF4E24E3FC2300959206 /* SaveView.swift */; };
 		ED93AF5224E4075D00959206 /* quoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93AF5124E4075D00959206 /* quoteModel.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED47E74B24E453EA00AE5E8B /* ContentBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockView.swift; sourceTree = "<group>"; };
 		ED93AF4C24E3EEE500959206 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		ED93AF4E24E3FC2300959206 /* SaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveView.swift; sourceTree = "<group>"; };
 		ED93AF5124E4075D00959206 /* quoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quoteModel.swift; sourceTree = "<group>"; };
@@ -74,7 +76,6 @@
 		EDB9909A24E3E54B00A03B66 /* RandomQuote */ = {
 			isa = PBXGroup;
 			children = (
-				ED93AF5024E4074E00959206 /* Model */,
 				EDB990AF24E3EA9700A03B66 /* View */,
 				ED93AF4C24E3EEE500959206 /* Data.json */,
 				ED93AF5424E4077F00959206 /* quoteViewModel.swift */,
@@ -102,6 +103,8 @@
 				EDB9909F24E3E54B00A03B66 /* TapBarView.swift */,
 				EDB990B024E3EAB600A03B66 /* RandomQuoteView.swift */,
 				ED93AF4E24E3FC2300959206 /* SaveView.swift */,
+				ED47E74B24E453EA00AE5E8B /* ContentBlockView.swift */,
+				ED93AF5024E4074E00959206 /* Model */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				EDB9909C24E3E54B00A03B66 /* AppDelegate.swift in Sources */,
 				EDB9909E24E3E54B00A03B66 /* SceneDelegate.swift in Sources */,
+				ED47E74C24E453EA00AE5E8B /* ContentBlockView.swift in Sources */,
 				ED93AF5524E4077F00959206 /* quoteViewModel.swift in Sources */,
 				ED93AF4F24E3FC2300959206 /* SaveView.swift in Sources */,
 				EDB990B124E3EAB600A03B66 /* RandomQuoteView.swift in Sources */,
