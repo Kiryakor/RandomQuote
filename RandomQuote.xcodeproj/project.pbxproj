@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		ED93AF4D24E3EEE600959206 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = ED93AF4C24E3EEE500959206 /* Data.json */; };
 		ED93AF4F24E3FC2300959206 /* SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93AF4E24E3FC2300959206 /* SaveView.swift */; };
-		ED93AF5224E4075D00959206 /* dataQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93AF5124E4075D00959206 /* dataQuote.swift */; };
-		ED93AF5524E4077F00959206 /* DataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93AF5424E4077F00959206 /* DataClass.swift */; };
+		ED93AF5224E4075D00959206 /* quoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93AF5124E4075D00959206 /* quoteModel.swift */; };
+		ED93AF5524E4077F00959206 /* quoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93AF5424E4077F00959206 /* quoteViewModel.swift */; };
 		EDB9909C24E3E54B00A03B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9909B24E3E54B00A03B66 /* AppDelegate.swift */; };
 		EDB9909E24E3E54B00A03B66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9909D24E3E54B00A03B66 /* SceneDelegate.swift */; };
 		EDB990A024E3E54B00A03B66 /* TapBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9909F24E3E54B00A03B66 /* TapBarView.swift */; };
@@ -23,8 +23,8 @@
 /* Begin PBXFileReference section */
 		ED93AF4C24E3EEE500959206 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		ED93AF4E24E3FC2300959206 /* SaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveView.swift; sourceTree = "<group>"; };
-		ED93AF5124E4075D00959206 /* dataQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataQuote.swift; sourceTree = "<group>"; };
-		ED93AF5424E4077F00959206 /* DataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClass.swift; sourceTree = "<group>"; };
+		ED93AF5124E4075D00959206 /* quoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quoteModel.swift; sourceTree = "<group>"; };
+		ED93AF5424E4077F00959206 /* quoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quoteViewModel.swift; sourceTree = "<group>"; };
 		EDB9909824E3E54B00A03B66 /* RandomQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB9909B24E3E54B00A03B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDB9909D24E3E54B00A03B66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,17 +50,9 @@
 		ED93AF5024E4074E00959206 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ED93AF5124E4075D00959206 /* dataQuote.swift */,
+				ED93AF5124E4075D00959206 /* quoteModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		ED93AF5324E4077400959206 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				ED93AF5424E4077F00959206 /* DataClass.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		EDB9908F24E3E54B00A03B66 = {
@@ -82,10 +74,10 @@
 		EDB9909A24E3E54B00A03B66 /* RandomQuote */ = {
 			isa = PBXGroup;
 			children = (
-				ED93AF5324E4077400959206 /* Helpers */,
 				ED93AF5024E4074E00959206 /* Model */,
-				ED93AF4C24E3EEE500959206 /* Data.json */,
 				EDB990AF24E3EA9700A03B66 /* View */,
+				ED93AF4C24E3EEE500959206 /* Data.json */,
+				ED93AF5424E4077F00959206 /* quoteViewModel.swift */,
 				EDB9909B24E3E54B00A03B66 /* AppDelegate.swift */,
 				EDB9909D24E3E54B00A03B66 /* SceneDelegate.swift */,
 				EDB990A124E3E55000A03B66 /* Assets.xcassets */,
@@ -188,10 +180,10 @@
 			files = (
 				EDB9909C24E3E54B00A03B66 /* AppDelegate.swift in Sources */,
 				EDB9909E24E3E54B00A03B66 /* SceneDelegate.swift in Sources */,
-				ED93AF5524E4077F00959206 /* DataClass.swift in Sources */,
+				ED93AF5524E4077F00959206 /* quoteViewModel.swift in Sources */,
 				ED93AF4F24E3FC2300959206 /* SaveView.swift in Sources */,
 				EDB990B124E3EAB600A03B66 /* RandomQuoteView.swift in Sources */,
-				ED93AF5224E4075D00959206 /* dataQuote.swift in Sources */,
+				ED93AF5224E4075D00959206 /* quoteModel.swift in Sources */,
 				EDB990A024E3E54B00A03B66 /* TapBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

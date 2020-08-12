@@ -8,13 +8,13 @@
 
 import Foundation
 
-final class DataClass:ObservableObject{
-    @Published var data:[dataQuote] = []
-    @Published var save:[dataQuote] = []
+final class QuoteViewModel:ObservableObject{
+    @Published var data:[quoteModel] = []
+    @Published var save:[quoteModel] = []
     
     func readData(){
         if let fileURL = Bundle.main.url(forResource: "Data", withExtension: "json"), let fileContents = try? Data(contentsOf: fileURL) {
-            self.data = try! JSONDecoder().decode([dataQuote].self, from: fileContents)
+            self.data = try! JSONDecoder().decode([quoteModel].self, from: fileContents)
         }
     }
     
@@ -27,5 +27,5 @@ final class DataClass:ObservableObject{
     
     private init (){}
     
-    static let share = DataClass()
+    static let share = QuoteViewModel()
 }

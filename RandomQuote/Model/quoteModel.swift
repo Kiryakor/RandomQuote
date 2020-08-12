@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct dataQuote:Codable, Hashable {
+struct quoteModel:Codable, Hashable {
     var author:String
     var quote:String
 }

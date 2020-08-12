@@ -12,7 +12,7 @@ struct RandomQuoteView: View {
     
     @State var quote:String = ""
     @State var author:String = ""
-    @ObservedObject var data:DataClass = DataClass.share
+    @ObservedObject var data:QuoteViewModel = QuoteViewModel.share
     
     var body: some View {
         NavigationView{
@@ -60,7 +60,7 @@ struct RandomQuoteView: View {
             }
         }
         if check{
-            self.data.save.insert(dataQuote(author: self.author, quote: self.quote), at: 0)
+            self.data.save.insert(quoteModel(author: self.author, quote: self.quote), at: 0)
         }
     }
 }

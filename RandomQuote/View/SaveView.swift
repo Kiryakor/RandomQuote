@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SaveView: View {
     
-    @ObservedObject var data:DataClass = DataClass.share
+    @ObservedObject var data:QuoteViewModel = QuoteViewModel.share
     
     var body: some View {
         NavigationView{
