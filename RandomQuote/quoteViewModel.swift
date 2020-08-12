@@ -9,6 +9,7 @@
 import Foundation
 
 final class QuoteViewModel:ObservableObject{
+    
     @Published var data:[quoteModel] = []
     @Published var save:[quoteModel] = []
     

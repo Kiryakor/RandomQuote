@@ -22,15 +22,23 @@ struct RandomQuoteView: View {
                 Spacer()
                 HStack(spacing: 70){
                     Button(action: {
+                        (self.quote,self.author) = self.data.updateText()
+                    }, label: {
+                        Image("next")
+                            .foregroundColor(Color.black)
+                            .rotationEffect(Angle(degrees: 180))
+                    })
+                    Button(action: {
                         self.saveData()
                     }, label: {
-                        Text("Save")
+                        Image("save")
+                        .foregroundColor(Color.black)
                     })
-                    
                     Button(action: {
                         (self.quote,self.author) = self.data.updateText()
                     }, label: {
-                        Text("Next")
+                        Image("next")
+                            .foregroundColor(Color.black)
                     })
                 }.padding(.bottom,50)
             }
@@ -39,7 +47,7 @@ struct RandomQuoteView: View {
                 self.data.readData()
                 (self.quote,self.author) = self.data.updateText()
             }
-            .navigationBarTitle("Random Quote")
+            .navigationBarTitle("Великие цитаты")
         }
     }
     

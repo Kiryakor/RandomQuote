@@ -14,17 +14,20 @@ struct TapBarView: View {
     
     var body: some View {
         TabView{
-            RandomQuoteView().tabItem {
-                Image(systemName: "list.dash")
-                Text("Цитаты")
-            }
-            SaveView().tabItem {
-                Image(systemName: "list.dash")
-                Text("Избранное")
-            }.onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+            RandomQuoteView()
+                .tabItem {
+                    Image(systemName: "list.dash")
+                    Text("Цитаты")
+                }
+            SaveView()
+                .tabItem {
+                    Image(systemName: "bookmark")
+                    Text("Избранное")
+                }
+        }
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
                 print("not active")
             }
-        }
     }
 }
 

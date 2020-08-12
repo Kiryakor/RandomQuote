@@ -78,6 +78,7 @@
 			children = (
 				EDB990AF24E3EA9700A03B66 /* View */,
 				ED93AF4C24E3EEE500959206 /* Data.json */,
+				ED93AF5024E4074E00959206 /* Model */,
 				ED93AF5424E4077F00959206 /* quoteViewModel.swift */,
 				EDB9909B24E3E54B00A03B66 /* AppDelegate.swift */,
 				EDB9909D24E3E54B00A03B66 /* SceneDelegate.swift */,
@@ -104,7 +105,6 @@
 				EDB990B024E3EAB600A03B66 /* RandomQuoteView.swift */,
 				ED93AF4E24E3FC2300959206 /* SaveView.swift */,
 				ED47E74B24E453EA00AE5E8B /* ContentBlockView.swift */,
-				ED93AF5024E4074E00959206 /* Model */,
 			);
 			path = View;
 			sourceTree = "<group>";

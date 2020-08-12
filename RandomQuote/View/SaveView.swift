@@ -23,7 +23,7 @@ struct SaveView: View {
             }
             .padding(.trailing,20)
             .padding(.horizontal)
-            .navigationBarTitle("Random Quote")
+            .navigationBarTitle("Великие цитаты")
         }.onAppear{
             self.data.readData()
         }
@@ -33,7 +33,6 @@ struct SaveView: View {
         self.data.save.remove(atOffsets: offsets)
     }
 }
-
 
 struct Save_Previews: PreviewProvider {
     static var previews: some View {
