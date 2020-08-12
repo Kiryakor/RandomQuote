@@ -22,7 +22,9 @@ struct RandomQuoteView: View {
                 Spacer()
                 HStack(spacing: 70){
                     Button(action: {
-                        (self.quote,self.author) = self.data.updateText()
+                        self.data.index -= 1
+                        self.quote = self.data.data[self.data.index].quote
+                        self.author = self.data.data[self.data.index].author
                     }, label: {
                         Image("next")
                             .foregroundColor(Color.black)
@@ -35,7 +37,9 @@ struct RandomQuoteView: View {
                         .foregroundColor(Color.black)
                     })
                     Button(action: {
-                        (self.quote,self.author) = self.data.updateText()
+                        self.data.index += 1
+                        self.quote = self.data.data[self.data.index].quote
+                        self.author = self.data.data[self.data.index].author
                     }, label: {
                         Image("next")
                             .foregroundColor(Color.black)
@@ -45,7 +49,9 @@ struct RandomQuoteView: View {
             .padding(.horizontal,35)
             .onAppear{
                 self.data.readData()
-                (self.quote,self.author) = self.data.updateText()
+                self.data.randomIndex()
+                self.quote = self.data.data[self.data.index].quote
+                self.author = self.data.data[self.data.index].author
             }
             .navigationBarTitle("Великие цитаты")
         }

@@ -12,6 +12,7 @@ final class QuoteViewModel:ObservableObject{
     
     @Published var data:[quoteModel] = []
     @Published var save:[quoteModel] = []
+    @Published var index:Int = 0
     
     func readData(){
         if let fileURL = Bundle.main.url(forResource: "Data", withExtension: "json"), let fileContents = try? Data(contentsOf: fileURL) {
@@ -19,11 +20,8 @@ final class QuoteViewModel:ObservableObject{
         }
     }
     
-    func updateText() -> (String,String){
-        let randomIndex:Int = Int.random(in: 0..<data.count)
-        let quote = data[randomIndex].quote
-        let author = data[randomIndex].author
-        return (quote,author)
+    func randomIndex(){
+        self.index = Int.random(in: 0..<data.count)
     }
     
     private init (){}
