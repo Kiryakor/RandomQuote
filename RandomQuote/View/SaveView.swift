@@ -24,8 +24,6 @@ struct SaveView: View {
             .padding(.trailing,20)
             .padding(.horizontal)
             .navigationBarTitle("Великие цитаты")
-        }.onAppear{
-            self.data.readData()
         }
     }
     

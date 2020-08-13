@@ -18,6 +18,15 @@ final class QuoteViewModel:ObservableObject{
         if let fileURL = Bundle.main.url(forResource: "Data", withExtension: "json"), let fileContents = try? Data(contentsOf: fileURL) {
             self.data = try! JSONDecoder().decode([quoteModel].self, from: fileContents)
         }
+        
+        let quote = UserDefaults.standard.object(forKey: "quote") as? [String] ?? [String]()
+        let author = UserDefaults.standard.object(forKey: "author") as? [String] ?? [String]()
+        self.save = []
+        if quote.count == author.count{
+            for i in 0..<quote.count{
+                save.append(quoteModel(author: author[i], quote: quote[i]))
+            }
+        }
     }
     
     func randomIndex(){
@@ -27,4 +36,17 @@ final class QuoteViewModel:ObservableObject{
     private init (){}
     
     static let share = QuoteViewModel()
+    
+    func saveData(){
+        var quote:[String] = []
+        var author:[String] = []
+        
+        save.forEach { (data) in
+            quote.append(data.quote)
+            author.append(data.author)
+        }
+        
+        UserDefaults.standard.set(quote, forKey: "quote")
+        UserDefaults.standard.set(author, forKey: "author")
+    }
 }

@@ -22,9 +22,10 @@ struct RandomQuoteView: View {
                 Spacer()
                 HStack(spacing: 70){
                     Button(action: {
-                        self.data.index -= 1
-                        self.quote = self.data.data[self.data.index].quote
-                        self.author = self.data.data[self.data.index].author
+                        if self.data.index > 0{
+                            self.data.index -= 1
+                            self.updateData()
+                        }
                     }, label: {
                         Image("next")
                             .foregroundColor(Color.black)
@@ -37,9 +38,10 @@ struct RandomQuoteView: View {
                         .foregroundColor(Color.black)
                     })
                     Button(action: {
-                        self.data.index += 1
-                        self.quote = self.data.data[self.data.index].quote
-                        self.author = self.data.data[self.data.index].author
+                        if self.data.index < self.data.data.count + 1{
+                            self.data.index += 1
+                            self.updateData()
+                        }
                     }, label: {
                         Image("next")
                             .foregroundColor(Color.black)
@@ -48,16 +50,13 @@ struct RandomQuoteView: View {
             }
             .padding(.horizontal,35)
             .onAppear{
-                self.data.readData()
-                self.data.randomIndex()
-                self.quote = self.data.data[self.data.index].quote
-                self.author = self.data.data[self.data.index].author
+                self.updateData()
             }
             .navigationBarTitle("Великие цитаты")
         }
     }
     
-    func saveData(){
+    private func saveData(){
         var check = true
         for i in self.data.save{
             if i.quote == self.quote{
@@ -68,6 +67,11 @@ struct RandomQuoteView: View {
         if check{
             self.data.save.insert(quoteModel(author: self.author, quote: self.quote), at: 0)
         }
+    }
+    
+    private func updateData(){
+        self.quote = self.data.data[self.data.index].quote
+        self.author = self.data.data[self.data.index].author
     }
 }
 

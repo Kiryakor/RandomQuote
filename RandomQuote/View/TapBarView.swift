@@ -11,6 +11,7 @@ import SwiftUI
 struct TapBarView: View {
     
     @State var presentRandomQuote:Bool = false
+    @ObservedObject var data:QuoteViewModel = QuoteViewModel.share
     
     var body: some View {
         TabView{
@@ -25,9 +26,13 @@ struct TapBarView: View {
                     Text("Избранное")
                 }
         }
-            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
-                print("not active")
-            }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+            self.data.saveData()
+        }
+        .onAppear{
+            self.data.readData()
+            self.data.randomIndex()
+        }
     }
 }
 
