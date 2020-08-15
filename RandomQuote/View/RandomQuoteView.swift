@@ -38,7 +38,7 @@ struct RandomQuoteView: View {
                         .foregroundColor(Color.black)
                     })
                     Button(action: {
-                        if self.data.index < self.data.data.count + 1{
+                        if self.data.index < self.data.data.count - 1{
                             self.data.index += 1
                             self.updateData()
                         }
